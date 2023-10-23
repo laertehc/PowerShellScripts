@@ -1,4 +1,4 @@
-﻿clear
+﻿﻿clear
 $computers = ('')
 $computers = Get-ADComputer -Filter * -SearchBase "Complete OU Path Ex: OU=IT_Computers,DC=mydomain,DC=local"|select Name
 foreach($c in $computers){
@@ -20,14 +20,14 @@ foreach($c in $computers){
                         7 {
                             if($version_number[1] -ge 69) {
                                 write-host "$Found is vulnerable to CVE-2023-38545" -ForegroundColor Green
-                                write-host "Versão Curl: $versions[1]" -ForegroundColor Yellow
+                                write-host "Curl Version: $versions[1]" -ForegroundColor Yellow
                                 write-host "---"
                             }
                         }
                         8 {
                             if($version_number[2] -le 3) {
                                 write-host "$Found is vulnerable to CVE-2023-38545" -ForegroundColor Green
-                                write-host "Versão Curl: $versions[1]" -ForegroundColor Yellow
+                                write-host "Curl Version: $versions[1]" -ForegroundColor Yellow
                                 write-host "---"
                             }
                         }
