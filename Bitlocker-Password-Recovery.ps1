@@ -1,8 +1,8 @@
 ﻿clear
 $computer = @('')
 $computer = get-adcomputer -filter *|Sort-Object name
-$computerl = ''
 $Bitlocker = @()
+
 foreach($c in $computer){
     $ad = Get-ADObject -Filter {ObjectClass -eq 'msFVE-RecoveryInformation'} -SearchBase $c.DistinguishedName -Properties "msFVE-RecoveryPassword", whencreated
     #if($ad.Length -eq 0){write-host $c.Name -ForegroundColor red}
