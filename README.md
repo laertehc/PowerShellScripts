@@ -9,5 +9,5 @@ Bitlocker Password Recovery must in Active Directory
 
 Notes:
 
-There is 3 comments in lines 8,9 and 21, the commands shows, in console, the computers where the bitlocker isn't installed or vincullated in AD
+There are 3 comments in lines 8,9 and 21, the commands shows, in console, the computers where the bitlocker isn't installed or vincullated in AD
 To enable, remove the # in start of the line
